@@ -50,21 +50,21 @@ function animateElementgato(element, start, end, duration){
  
  const allImg = document.querySelectorAll('img');
  Promise.all([
-    animateElement(allImg[0],'', 0, 800, 3000),
-    animateElement(allImg[1],'', 0, 800, 8000)
+    animateElement(allImg[0],'', 0, document.getElementById("pistaCarrera").offsetWidth -90, 3000),
+    animateElement(allImg[1],'', 0, document.getElementById("pistaCarrera").offsetWidth -180, 4000)
  ]
     
  ).then(()=> {
-  return Promise.all([animateElement(allImg[0],'ArribaAbajo', 0, 400, 8000),
-  animateElement(allImg[1],'ArribaAbajo', 0, 450, 3000)]
+  return Promise.all([animateElement(allImg[0],'ArribaAbajo', 0, 500, 4000),
+  animateElement(allImg[1],'ArribaAbajo', 0, 500, 3000)]
     
  ).then(()=> {
-    return Promise.all([animateElement(allImg[0],'', 800, 0, 8000),
-    animateElement(allImg[1],'', 800, 0, 3000)]
+    return Promise.all([animateElement(allImg[0],'', document.getElementById("pistaCarrera").offsetWidth, 0, 4000),
+    animateElement(allImg[1],'', document.getElementById("pistaCarrera").offsetWidth, 0, 3000)]
 
  ).then(()=>{
-    return Promise.all([animateElement(allImg[0],'ArribaAbajo', 400, 0, 8000),
-    animateElement(allImg[1],'ArribaAbajo', 450, 0, 3000)]     
+    return Promise.all([animateElement(allImg[0],'ArribaAbajo', 500, 0, 4000),
+    animateElement(allImg[1],'ArribaAbajo', 500, 0, 3000)]     
 
  )
  })
